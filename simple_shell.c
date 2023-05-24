@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <sys/types.h>
+#include "simpleshell.h"
+
+/**
+ * main - entry
+ * 
+ * Return: 0 Always (Success)
+ */
 
 int main(void)
 {
@@ -15,7 +16,8 @@ pid_t pid;
 
 while(1)
 {
-printf("$ ");
+_putchar('$');
+_putchar(' ');
 
 if(getline(&cmd, &n, stdin) == -1)
 {
