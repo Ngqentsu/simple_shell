@@ -6,7 +6,7 @@
  * Return: 0 Always (Success)
  */
 
-int main(void)
+int main(int argc, char *argv[])
 {
 char *cmd = NULL, *cmd_cp = NULL, *token = NULL, *delim = " \n";
 size_t n = 0;

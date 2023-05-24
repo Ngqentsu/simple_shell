@@ -7,6 +7,7 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
@@ -16,5 +17,6 @@ void _puts(char *str);
 int _strcmp(char *s1, char *s2);
 char *_strstr(char *haystack, char *needle);
 int _putchar(char c);
+char *get_path(char *cmd);
 
 #endif
