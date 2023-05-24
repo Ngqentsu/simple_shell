@@ -21,7 +21,6 @@ _putchar(' ');
 
 if(getline(&cmd, &n, stdin) == -1)
 {
-printf("Exiting...\n");
 break;
 }
 
@@ -70,6 +69,11 @@ perror("Error");
 else
 {
 wait(NULL);
+if (strcmp(argv[0], "exit") == 0)
+{
+printf("Exiting...\n");
+break;
+}
 }
 }
 
