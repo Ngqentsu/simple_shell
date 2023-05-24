@@ -34,8 +34,10 @@ token = strtok(NULL, delim);
 argc++;
 }
 
-argv = malloc(sizeof(char *) * argc);
 token = strtok(cmd_cp, delim);
+argv = malloc(sizeof(char *) * argc);
+if (argv == NULL)
+return (0);
 
 while(token != NULL)
 {
@@ -48,9 +50,7 @@ argv[i] = NULL;
 for (i = 0; argv[i] != NULL; i++)
 {
 for (j = 0; argv[i][j] != '\0'; j++)
-{
 _putchar(argv[i][j]);
-}
 _putchar('\n');
 }
 
@@ -58,6 +58,8 @@ if (strcmp(argv[0], "exit") == 0)
 {
 break;
 }
+
+cmd = get_path(argv[0]);
 
 pid = fork();
 if (pid == -1)
@@ -68,7 +70,7 @@ exit(EXIT_FAILURE);
 
 if (pid == 0)
 {
-int check = execve(argv[0], argv, NULL);
+int check = execve(cmd, argv, NULL);
 if (check == -1)
 perror("Error");
 }
