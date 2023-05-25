@@ -29,13 +29,13 @@ int get_len(int l)
 }
 /**
  * aux_itoa - func converts int to str.
- * @l: type int number
+ * @n: type int number
  * Return: Str.
  */
 char *aux_itoa(int l)
 {
 	unsigned int l1;
-	int lenght = get_len(n);
+	int lenght = get_len(l);
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * (lenght + 1));
@@ -56,7 +56,7 @@ char *aux_itoa(int l)
 
 	lenght--;
 	do {
-		*(buffer + lenght) = (n1 % 10) + '0';
+		*(buffer + lenght) = (l1 % 10) + '0';
 		l1 = l1 / 10;
 		lenght--;
 	}
@@ -93,7 +93,7 @@ int _atoi(char *s)
 
 	for (k = count - size; k < count; k++)
 	{
-		oi = oi + ((*(s + i) - 48) * m);
+		oi = oi + ((*(s + k) - 48) * m);
 		m /= 10;
 	}
 	return (oi * pn);

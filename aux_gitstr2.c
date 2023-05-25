@@ -2,7 +2,7 @@
 
 /**
  * _strdup - duplicates a str in the heap mem.
- * @s: Type char pointer str
+ * @t: Type char pointer str
  * Return: duplicated str
  */
 char *_strdup(const char *t)
@@ -20,7 +20,7 @@ char *_strdup(const char *t)
 
 /**
  * _strlen - Returns the lenght of a string.
- * @s: Type char pointer
+ * @t: Type char pointer
  * Return: Always 0.
  */
 int _strlen(const char *t)
@@ -120,9 +120,9 @@ int _isdigit(const char *t)
 {
 	unsigned int k;
 
-	for (i = 0; t[k]; i++)
+	for (k = 0; t[k]; k++)
 	{
-		if (s[k] < 48 || s[k] > 57)
+		if (t[k] < 48 || t[k] > 57)
 			return (0);
 	}
 	return (1);

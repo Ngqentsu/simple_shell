@@ -64,7 +64,7 @@ int error_sep_op(char *input, int w, char last)
 		}
 	}
 
-	return (error_sep_op(input + 1, i + 1, *input));
+	return (error_sep_op(input + 1, w + 1, *input));
 }
 
 /**

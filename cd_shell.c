@@ -11,7 +11,7 @@ int cd_shell(data_shell *datash)
 	char *directory;
 	int ishome, ishome2, isddash;
 
-	dir = datash->args[1];
+	directory = datash->args[1];
 
 	if (directory != NULL)
 	{

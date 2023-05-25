@@ -85,7 +85,7 @@ int is_executable(data_shell *datash)
 	char *input;
 
 	input = datash->args[0];
-	for (w = 0; input[w]; i++)
+	for (w = 0; input[w]; w++)
 	{
 		if (input[w] == '.')
 		{
@@ -96,7 +96,7 @@ int is_executable(data_shell *datash)
 			else
 				break;
 		}
-		else if (input[w] == '/' && i != 0)
+		else if (input[w] == '/' && w != 0)
 		{
 			if (input[w + 1] == '.')
 				continue;
