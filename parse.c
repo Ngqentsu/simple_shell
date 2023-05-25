@@ -47,7 +47,7 @@ char *dup_chars(char *pa, int strt, int stp)
 }
 /**
  * find_path - a function.
- * @finf: the struct info. 
+ * @finf: the struct info.
  * @pa: string path
  * @cemde: to find the cmd
  * Return: null or if the path if cmd found

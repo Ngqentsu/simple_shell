@@ -38,9 +38,9 @@ typedef struct liststr
 	struct liststr *next;
 } list_t;
 /**
- *struct passinfo - A framework that holds a pair of parameters that will be utilized within various functions.
+ *struct passinfo - A framework that holds a pair of parameters to be utilized.
  *@arg: The getline function includes a pair of string arguments within it.
- *@argv: The arguments are retrieved from the array, with the array itself being the source.
+ *@argv: The arguments are retrieved from the array.
  *@path: updated directive for this character sequence location
  *@argc: the number of arguments
  *@line_count: we here know the error of count
