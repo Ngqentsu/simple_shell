@@ -137,7 +137,7 @@ int renumber_history(info_t *finf)
 
 	while (no)
 	{
-		no->num = a++;
+		no->num = e++;
 		no = no->next;
 	}
 	return (finf->histcount = e);

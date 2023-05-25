@@ -60,7 +60,7 @@ ssize_t get_input(info_t *finf)
 	if (tall)
 	{
 		b = a;
-		t = abuff + a;
+		t = ba + a;
 
 		check_chain(finf, ba, &b, a, tall);
 		while (b < tall)

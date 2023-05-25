@@ -150,7 +150,7 @@ int replace_vars(info_t *finf)
  */
 int replace_string(char **o, char *p)
 {
-	free(*p);
+	free(*o);
 	*o = p;
 	return (1);
 }

@@ -25,10 +25,10 @@ char **strtow(char *in, char *deli)
 		return (NULL);
 	for (a = 0, b = 0; b < nw; b++)
 	{
-		while (is_delim(s[a], deli))
+		while (is_delim(in[a], deli))
 			a++;
 		c = 0;
-		while (!is_delim(in[a + c], deli) && s[a + c])
+		while (!is_delim(in[a + c], deli) && in[a + c])
 			c++;
 		k[b] = malloc((c + 1) * sizeof(char));
 		if (!k[b])
@@ -39,7 +39,7 @@ char **strtow(char *in, char *deli)
 			return (NULL);
 		}
 		for (m = 0; m < c; m++)
-			k[b][m] = s[a++];
+			k[b][m] = in[a++];
 		k[b][m] = 0;
 	}
 	k[b] = NULL;
